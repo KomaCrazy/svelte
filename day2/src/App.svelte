@@ -2,7 +2,7 @@
 	
 	import { onMount } from "svelte";
 
-	import { apiData, datatable} from './store.js';
+	import { apiData, profile} from './store.js';
 	
 	onMount(async () => {
 	  const link1 = "http://192.168.1.73:5000/2"
@@ -24,8 +24,9 @@
 			<th>Id</th>
 			<th>user</th>
 			<th>password</th>
-		{#each $datatable as dataid}
-			<tr>{dataid}</tr>
+		{#each $profile as box}
+			<tr>{box}</tr>
+
 		{/each}
 	</table>
 	</main>
