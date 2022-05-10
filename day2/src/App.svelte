@@ -2,12 +2,10 @@
 	
 	import { onMount } from "svelte";
 
-	import { apiData, dataid} from './store.js';
+	import { apiData, datatable} from './store.js';
 	
 	onMount(async () => {
-	  const link1 = "http://192.168.1.50:5000/2"
-	  const link2 = "https://covid19.ddc.moph.go.th/api/Cases/today-cases-all"
-	  const link3 = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon"
+	  const link1 = "http://192.168.1.73:5000/2"
 	  fetch(link1)
 	  .then(response => response.json())
 	  .then(data => {
@@ -21,14 +19,26 @@
 	</script>
 	
 	<main>
-		<h1>Whiskey Drinks Menu</h1>
-		<ul>
-		{#each $dataid as dataid , datauser}
-			<li>{dataid}</li>
+		<h1>Table</h1>
+		<table>
+			<th>Id</th>
+			<th>user</th>
+			<th>password</th>
+		{#each $datatable as dataid}
+			<tr>{dataid}</tr>
 		{/each}
-		</ul>
+	</table>
 	</main>
-	
 	<style>
-	
+	body{
+		font-family: Verdatna;
+	}
+	tr, th{
+		border: 1px solid #dddddd;
+		text-align: center;
+		padding: 8px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
 	</style>
