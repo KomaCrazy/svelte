@@ -16,6 +16,7 @@
 		return [];
 	  });
 	});
+	
 	</script>
 	
 	<main>
@@ -29,8 +30,7 @@
 		{#each $datatable as box}
 		<tr>
 			<th>{box.id}</th>
-			<th>{box.user}</th>
-			<th>{box.pwd}</th>
+
 		</tr>
 		{/each}
 	</table>
