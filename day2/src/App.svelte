@@ -19,6 +19,7 @@
 	</script>
 	
 	<main>
+		
 		<h1>Table</h1>
 		<table>
 			<th>Id</th>
