@@ -21,22 +21,23 @@
 
 
 <Router>
+<main>
 <header>
 <h1>History</h1>
 <nav><table>
 	<th><Link to="/">HOME</Link></th>
-	<th><Link to="data">data</Link></th>
+	<th><Link to="/data">data</Link></th>
 	<th><Link to="about">about</Link></th>
 </table></nav>
 </header>
-<main>
+
 
 <Route path="/">
 <h3>HOME</h3>
 
 </Route>
 
-<Route path="data">
+<Route path="/data">
 	<h3>Data</h3>
 	<table>
         <tr>
